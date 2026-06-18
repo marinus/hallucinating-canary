@@ -68,51 +68,47 @@ retains full pre-compaction history, so survival is measured only over the
 
 ## Installation
 
-### Method 1: Install from GitHub (Recommended)
+### Quick Start (Development Mode)
 
-The easiest way — one command in Claude Code:
+Get started immediately — no installation needed:
 
+```bash
+git clone https://github.com/marinus/hallucinating-canary.git
+cd hallucinating-canary
+claude --plugin-dir ./plugin
+```
+
+The plugin will be active for that session. On your **first session**, the
+SessionStart hook automatically sets up `.hallucinating-canary.json`, the state
+directory, and statusline wiring. The indicator appears on your **next** session.
+
+### Install Permanently (for daily use)
+
+To use the plugin in all projects (not just one session):
+
+**Step 1:** Clone the repo
+
+```bash
+git clone https://github.com/marinus/hallucinating-canary.git
+```
+
+**Step 2:** Link it as a local marketplace
+
+In Claude Code:
 ```text
-/plugin marketplace add marinus/hallucinating-canary
+/plugin marketplace add /path/to/hallucinating-canary
 /plugin install hallucinating-canary@hallucinating-canary
 ```
 
-That's it. Claude Code will download and install the plugin. On your next session
-start, the indicator will appear in your statusline.
-
-**In the terminal**, you can also use:
+Or from the terminal:
 ```bash
-claude plugin marketplace add marinus/hallucinating-canary
-claude plugin install hallucinating-canary@hallucinating-canary
-```
-
-### Method 2: Clone and Install Locally
-
-Use this if you want to develop, test, or customize the plugin.
-
-```bash
-# Clone the repository
-git clone https://github.com/marinus/hallucinating-canary.git
-cd hallucinating-canary
-
-# Install from your local clone
-# In Claude Code:
-# /plugin marketplace add /path/to/hallucinating-canary
-# /plugin install hallucinating-canary@hallucinating-canary
-
-# Or from the terminal:
 claude plugin marketplace add /path/to/hallucinating-canary
 claude plugin install hallucinating-canary@hallucinating-canary
 ```
 
-Replace `/path/to/hallucinating-canary` with the actual path (e.g.,
-`/Users/yourname/Projects/hallucinating-canary`).
+Replace `/path/to/hallucinating-canary` with your clone's full path.
 
-For **development** (session-only, no install needed):
-```bash
-cd /path/to/hallucinating-canary
-claude --plugin-dir ./plugin
-```
+**Note:** The plugin marketplace installation requires a compatible Claude Code version. If you encounter compatibility errors, use the development mode above instead.
 
 ### Initial Setup
 
