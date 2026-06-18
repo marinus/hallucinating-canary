@@ -1,0 +1,6 @@
+{
+  "name": "hallucinating-canary",
+  "description": "Early-warning signal for response degradation: injects canary anchors as a proxy, detects context loss/compaction, and shows a health indicator in the statusline.",
+  "version": "0.1.0",
+  "author": { "name": "Marinus" }
+}

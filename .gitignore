@@ -1,0 +1,10 @@
+# HallucinatingCanary runtime state (per-project; never committed)
+.claude/hallucinating-canary/
+.hallucinating-canary.json
+
+# Claude Code local settings
+.claude/settings.local.json
+
+# Python
+__pycache__/
+*.pyc
