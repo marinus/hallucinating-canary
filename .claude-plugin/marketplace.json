@@ -3,12 +3,12 @@
   "description": "Marketplace for the HallucinatingCanary plugin",
   "owner": {
     "name": "Marinus",
-    "contact": "marinus@telic.co.za"
+    "email": "marinus@telic.co.za"
   },
   "plugins": [
     {
       "name": "hallucinating-canary",
-      "path": "./plugin"
+      "source": "./plugin"
     }
   ]
 }
