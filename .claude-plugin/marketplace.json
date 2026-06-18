@@ -1,0 +1,8 @@
+{
+  "plugins": [
+    {
+      "name": "hallucinating-canary",
+      "path": "./plugin"
+    }
+  ]
+}
