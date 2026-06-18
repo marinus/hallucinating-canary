@@ -5,7 +5,14 @@
 # HallucinatingCanary
 marinus@telic.co.za
 
+
 > *A canary in the coal mine for your Claude Code context.*
+
+
+<div align="center">
+  <img src="example.png" alt="HallucinatingCanary Logo" width="650">
+</div>
+
 
 A lightweight [Claude Code](https://claude.com/claude-code) plugin that gives you
 an **early warning when Claude's responses are about to degrade** — the drift,
@@ -85,6 +92,8 @@ claude plugin install hallucinating-canary@hallucinating-canary
 ```
 
 That's it. The indicator appears in your statusline on your **next** session.
+
+> restart Claude Code if the "🟢 Context 100%" doesn't appear
 
 ### Method 2: Clone, then Install
 
