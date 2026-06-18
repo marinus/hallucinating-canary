@@ -1,4 +1,10 @@
 {
+  "name": "hallucinating-canary",
+  "description": "Marketplace for the HallucinatingCanary plugin",
+  "owner": {
+    "name": "Marinus",
+    "contact": "marinus@telic.co.za"
+  },
   "plugins": [
     {
       "name": "hallucinating-canary",
