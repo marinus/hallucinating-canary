@@ -68,47 +68,55 @@ retains full pre-compaction history, so survival is measured only over the
 
 ## Installation
 
-### Quick Start (Development Mode)
+### Method 1: Install from GitHub (Recommended)
 
-Get started immediately — no installation needed:
+The easiest way — two commands, no cloning. Run these **in Claude Code**:
+
+```text
+/plugin marketplace add marinus/hallucinating-canary
+/plugin install hallucinating-canary@hallucinating-canary
+```
+
+Or run them **in your terminal**:
+
+```bash
+claude plugin marketplace add marinus/hallucinating-canary
+claude plugin install hallucinating-canary@hallucinating-canary
+```
+
+That's it. The indicator appears in your statusline on your **next** session.
+
+### Method 2: Clone, then Install
+
+Use this if you want to read, modify, or contribute to the code first.
+
+**Step 1 — Clone the repo:**
 
 ```bash
 git clone https://github.com/marinus/hallucinating-canary.git
 cd hallucinating-canary
-claude --plugin-dir ./plugin
 ```
 
-The plugin will be active for that session. On your **first session**, the
-SessionStart hook automatically sets up `.hallucinating-canary.json`, the state
-directory, and statusline wiring. The indicator appears on your **next** session.
+**Step 2 — Install from your local clone.** In Claude Code:
 
-### Install Permanently (for daily use)
-
-To use the plugin in all projects (not just one session):
-
-**Step 1:** Clone the repo
-
-```bash
-git clone https://github.com/marinus/hallucinating-canary.git
-```
-
-**Step 2:** Link it as a local marketplace
-
-In Claude Code:
 ```text
 /plugin marketplace add /path/to/hallucinating-canary
 /plugin install hallucinating-canary@hallucinating-canary
 ```
 
-Or from the terminal:
+Or in your terminal:
+
 ```bash
 claude plugin marketplace add /path/to/hallucinating-canary
 claude plugin install hallucinating-canary@hallucinating-canary
 ```
 
-Replace `/path/to/hallucinating-canary` with your clone's full path.
+Replace `/path/to/hallucinating-canary` with your clone's full path (e.g.
+`/Users/yourname/Projects/hallucinating-canary`).
 
-**Note:** The plugin marketplace installation requires a compatible Claude Code version. If you encounter compatibility errors, use the development mode above instead.
+> **Tip — just trying it out?** For a throwaway, session-only run that doesn't
+> install anything, clone the repo and start Claude Code with the plugin mounted:
+> `claude --plugin-dir ./plugin`. The plugin is active only for that session.
 
 ### Initial Setup
 

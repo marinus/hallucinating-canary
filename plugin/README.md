@@ -51,19 +51,20 @@ plugin/
 
 ## Installation
 
-### Quick Start
+### From GitHub (Recommended)
+
+Two commands, no cloning:
 
 ```bash
-git clone https://github.com/marinus/hallucinating-canary.git
-cd hallucinating-canary
-claude --plugin-dir ./plugin
+claude plugin marketplace add marinus/hallucinating-canary
+claude plugin install hallucinating-canary@hallucinating-canary
 ```
 
-The plugin loads for that session. The SessionStart hook auto-initializes
-`.hallucinating-canary.json`, state dir, and statusline on your first session.
-The indicator appears on your next session.
+(The same two `/plugin …` commands work inside Claude Code.)
 
-### Install for Daily Use
+### Clone, then Install
+
+To read or modify the code first:
 
 ```bash
 git clone https://github.com/marinus/hallucinating-canary.git
@@ -72,7 +73,10 @@ claude plugin marketplace add /path/to/hallucinating-canary
 claude plugin install hallucinating-canary@hallucinating-canary
 ```
 
-**Note:** If you hit a compatibility error, use the quick start above instead.
+Replace `/path/to/hallucinating-canary` with your clone's full path.
+
+For a throwaway, session-only run that installs nothing:
+`cd hallucinating-canary && claude --plugin-dir ./plugin`.
 
 **No setup command** — the SessionStart hook self-initializes on first session:
 - Creates `.hallucinating-canary.json` (config, gitignored)
