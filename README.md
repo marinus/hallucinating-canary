@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="logo.png" alt="HallucinatingCanary Logo" width="400">
+  <img src="logo.png" alt="HallucinatingCanary Logo" width="350">
 </div>
 
 # HallucinatingCanary
@@ -12,14 +12,14 @@ an **early warning when Claude's responses are about to degrade** — the drift,
 forgotten instructions, and hallucinations you'd otherwise only notice *after*
 they've landed in your work.
 
-## The problem
+## The Problem
 
 In a long session, response quality decays silently. Claude forgets earlier
 instructions, loses track of decisions, and starts to hallucinate — and you
 usually find out only when it produces something wrong. There's no cheap, direct
 signal for "quality is dropping right now."
 
-## The idea: use a canary as a proxy
+## The Idea: use a canary as a proxy
 
 You can't measure "hallucination" directly and cheaply. But you *can* measure the
 **conditions that cause it**. The biggest driver of degradation in a long session
@@ -208,7 +208,6 @@ python3 plugin/test/inspect.py      # inspect live state for ~/cc-canary-test
   1. The compaction-boundary heuristic (`is_compaction_summary`) is a best-guess
      until checked against a real compacted transcript.
   2. *How well canary survival actually predicts degradation* — the core proxy
-     assumption. Both are addressed by the
-     [validation experiment](experiments/canary-survival.md).
-
+     assumption. 
+  
 See [`plugin/README.md`](plugin/README.md) for plugin internals.
