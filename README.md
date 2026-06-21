@@ -26,7 +26,7 @@ instructions, loses track of decisions, and starts to hallucinate — and you
 usually find out only when it produces something wrong. There's no cheap, direct
 signal for "quality is dropping right now."
 
-## The Idea: use a canary as a proxy
+## The Idea: use a prompt canary as a proxy
 
 You can't measure "hallucination" directly and cheaply. But you *can* measure the
 **conditions that cause it**. The biggest driver of degradation in a long session
